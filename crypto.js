@@ -15,14 +15,16 @@ console.log("Output is " + output + "with length" + output.length)
 console.log("Hex String is " + convertToHex(output));
 console.log("\n")
 
+var xord = ""
 for (var i = 0; i < output.length; i++) {
-    output[i] = output[i] ^ key[i]
+    var result = output[i] ^ key[i]
+    xord += result
 }
 console.log("***OUTPUT AFTER XOR ***")
 console.log("OUT: " + output)
 console.log("KEY: " + key)
-console.log ("XOR'd is " + output)
-console.log("XOR'd Hex String is " + convertToHex(output))
+console.log ("XOR: " + xord)
+console.log("XOR'd Hex String is " + convertToHex(xord))
 console.log("\n")
 
 //Split the output into 6 bit chunks
